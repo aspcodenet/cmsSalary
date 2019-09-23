@@ -10,8 +10,23 @@ namespace CmsSalarySystem
     {
         static void Main(string[] args)
         {
-            var employee = new Employee("Stefan", "12345");
             var hourEmployee = new HourEmployee("Stefan", "12345", 100m);
+            var sellerEmployee = new SellerEmployee("Josefine", "31",10000);
+            var monthlyEmployee = new MonthlyEmployee("Oliver", "312231",5000);
+
+            var lista = new List<Employee>();
+            lista.Add(hourEmployee);
+            lista.Add(sellerEmployee);
+            lista.Add(monthlyEmployee);
+
+
+            foreach(var employee in lista)
+            {
+                Console.WriteLine($"Löneberäkning för {employee.Name}");
+                employee.RunSalary();
+            }
+
+
         }
     }
 }

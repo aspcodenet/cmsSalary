@@ -16,5 +16,10 @@ namespace CmsSalarySystem
 
         public string Name { get; }
         public string AccountNo { get; }
+
+        public virtual void RunSalary()
+        {
+
+        }
     }
 }
