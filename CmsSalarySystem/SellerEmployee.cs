@@ -18,9 +18,16 @@ namespace CmsSalarySystem
         {
         }
 
+        public override void PrintDescription()
+        {
+            base.PrintDescription();
+            Console.WriteLine($"och adderat provision {soldFor} * 0.01");
+        }
+
+
         public override void RunSalary()
         {
-            Console.WriteLine($"Salary: {MonthlySalary + (soldFor * 0.02m)}");
+            Console.WriteLine($"Salary: {MonthlySalary + (soldFor * 0.01m)}");
         }
 
 

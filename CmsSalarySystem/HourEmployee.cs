@@ -21,6 +21,12 @@ namespace CmsSalarySystem
 
         public decimal HourlySalary { get; }
 
+        public override void PrintDescription()
+        {
+            Console.WriteLine($"Vi har räknat på timlön{HourlySalary} och antal timmar{nrOfWorkedHours}");
+        }
+
+
         public override void RunSalary()
         {
             Console.WriteLine($"Salary: {HourlySalary * nrOfWorkedHours}");

@@ -16,6 +16,12 @@ namespace CmsSalarySystem
 
         public decimal MonthlySalary { get; }
 
+        public override void PrintDescription()
+        {
+            base.PrintDescription();
+            Console.WriteLine($"Vi har bara tagit din månadslön {MonthlySalary}");
+        }
+
         public override void RunSalary()
         {
             Console.WriteLine($"Salary: {MonthlySalary}");

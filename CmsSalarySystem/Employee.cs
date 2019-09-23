@@ -16,10 +16,12 @@ namespace CmsSalarySystem
 
         public string Name { get; }
         public string AccountNo { get; }
+        public string ClearingNumber { get; }
 
-        public virtual void RunSalary()
-        {
-
+        public virtual void PrintDescription() {
+            Console.WriteLine("Följande regelverk har använts");
         }
+
+        public virtual void RunSalary() { }
     }
 }
